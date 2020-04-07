@@ -1,6 +1,7 @@
 var overNightInput=document.querySelector("#overnight");
 var erCareField=document.querySelector("#erCare")
 var intensiveField=document.querySelector("#intensive")
+var annualField=document.querySelector("#annual")
 
 overNightInput.oninput=(e)=>{
     if(!isNaN(e.target.value)){
@@ -17,6 +18,7 @@ function outputVal(num){
     var half=num/2
     var double=num*2
     var hundred=num*100
+    var annual=num*365;
 
     erCareField.value=half;
     intensiveField.value=double;
@@ -27,6 +29,7 @@ function outputVal(num){
 
     autoField.value=doubleAcc;
     commonField.value=tripleAcc;
+    annualField.value=annual
 }
 
 
